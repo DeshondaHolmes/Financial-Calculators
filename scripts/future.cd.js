@@ -12,3 +12,16 @@ n= number of times that interest in compaunded every year , (n=365,interest comp
 t=time , number of years until maturity date
 
 */
+
+const txtInput = document.getElementById("txtInput");
+
+const txtOutput = document.getElementById("txtOutput");
+
+const calculateBtn = document.getElementById("calculateBtn");
+
+window.onload = init;
+
+
+function init(){
+    calculateBtn.onclick = onCalculateBtnClicked;
+}
