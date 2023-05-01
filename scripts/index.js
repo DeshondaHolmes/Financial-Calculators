@@ -36,22 +36,37 @@ window.onload = init;
 function init(){
     console.log("I work")
 
-
     //code will run once oage finsih loading
     calculateBtn.onclick = onCalculateBtnClicked;
-
-
 }
 
 
-/*function onCalculateBtnClicked(){
-   
-    console.log("I work")
 
-    let 
+function onCalculateBtnClicked(){
+    console.log("Clicked!!")
+
+    // get the known (user supplied) values.
+
+
+    let userTypedValue = txtInputP;
+    let valueAsNumber = userTypedValue;
+    console.log("Got the value from the textbox it was: " + userTypedValue);
+
+    
+    // calculate the unknown..
+   // let Total = valueAsNumber * (9/5) + 32;
+   // console.log("calculated the value of: " + Total);
+
+
+    let Cost = valueAsNumber * ((1+txtInputP/(100)**txtInputIr)/txtInputL/(12));
+    console.log("calculated the value of: " + Cost);
+
+
+    // display the results to the user
+    txtOutputCost = Cost;
+    txtOutputTotal = Total;
+
 }
-
-
 
 
 /* 
@@ -85,3 +100,16 @@ L=length of loan in monhts
     txtOutput.value = fahrenheit;
 
 }*/
+
+
+   /* let txtInputP = txtInputP.value;
+
+    let txtInputIr= txtInputIr.value;
+
+    let txtInputL = txtInputL.value;
+
+    //
+    let txtOutputCost = txtOutputCost.value;
+
+    let txtOutputTotal = txtOutputTotal.value;
+*/
