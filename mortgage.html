@@ -61,27 +61,27 @@
                 <div class="col text-align-center">
                     <form id="myForm">
                         <div class="mb-3">
-                            <label for="txtInputP" class="form-label"> Borrow amount (Principal) </label>
-                            <input type="text" class="form-control" id="txtInputP" value=" $ ">
+                            <label for="amount" class="form-label"> Borrow amount (Principal) </label>
+                            <input type="text" class="form-control" id="amount" value=" $ ">
                         </div>
                         <div class="mb-3">
-                            <label for="txtInputIr" class="form-label">Interest rate per year</label>
-                            <input type="text" class="form-control" id="txtInputIr" value="$"/>
+                            <label for="interestRate" class="form-label">Interest rate per year</label>
+                            <input type="text" class="form-control" id="interestRate" />
                         </div>
                         <div class="mb-3">
-                            <label for="txtInputL" class="form-label">Loan term in years</label>
-                            <input type="text" class="form-control" id="txtInputL" value="%">
+                            <label for="years" class="form-label">Loan term in years</label>
+                            <input type="text" class="form-control" id="years">
                         </div>
                         <div class="mb-3">
-                            <label for="txtOutputCost" class="form-label">Expected Monthly Cost :</label>
-                            <input type="text" class="form-control" id="txtOutputCost" value="$" readonly="">
+                            <label for="payment" class="form-label">Expected Monthly Cost :</label>
+                            <input type="text" class="form-control" id="payment" value="$" readonly="">
                         </div>
                         <br>
                         <div class="mb-3">
-                            <label for="txtOutputTotal" class="form-label">Total Interest Paid  :</label>
-                            <input type="text" class="form-control" id="txtOutputTotal" value="$" readonly="">
+                            <label for="totalInterest" class="form-label">Total Interest Paid  :</label>
+                            <input type="text" class="form-control" id="totalInterest" value="$" readonly="">
                         </div>
-                        <button id="calculateBtn" type="button" class="btn btn-primary">Calculate</button>
+                        <button id="calculate" type="button" class="btn btn-primary">Calculate</button>
                         <button id="resetBtn" type="button" class="btn btn-danger">Start Over</button>
                     </form>
                 </div>

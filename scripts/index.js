@@ -1,115 +1,56 @@
 "Use strict";
 
 //Input prinicpal
-const txtInputP = document.getElementById("txtInputP");
+const amount = document.getElementById("amount");
 
 //input interest
-const txtInputIr = document.getElementById("txtInputIr");
+const interestRate = document.getElementById("interestRate");
 
 //input loan length
-const txtInputL = document.getElementById("txtInputL");
-
-
-
-
+const years = document.getElementById("years");
 
 //output
 
+const payments = document.getElementById("payments");
 
-const txtOutputCost = document.getElementById("txtOutputCost");
-
-const txtOutputTotal = document.getElementById("txtOutputTotal");
-
+const totalInterest = document.getElementById("totalInterest");
 
 //button
 
-const calculateBtn = document.getElementById("calculateBtn");
-
+const calculate = document.getElementById("calculate");
 
 //wire up
 window.onload = init;
 
 
-
 //button function
 
 function init(){
-    console.log("I work")
-
     //code will run once oage finsih loading
-    calculateBtn.onclick = onCalculateBtnClicked;
+    calculate.onclick = onCalculateClicked;
 }
 
-
-
-function onCalculateBtnClicked(){
-    console.log("Clicked!!")
-
-    // get the known (user supplied) values.
-
-
-    let userTypedValue = txtInputP;
-    let valueAsNumber = userTypedValue;
-    console.log("Got the value from the textbox it was: " + userTypedValue);
-
-    
-    // calculate the unknown..
-   // let Total = valueAsNumber * (9/5) + 32;
-   // console.log("calculated the value of: " + Total);
-
-
-    let Cost = valueAsNumber * ((1+txtInputP/(100)**txtInputIr)/txtInputL/(12));
-    console.log("calculated the value of: " + Cost);
-
-
-    // display the results to the user
-    txtOutputCost = Cost;
-    txtOutputTotal = Total;
-
-}
-
-
-/* 
-Calculate payment for loan 
-
-
-M  =  P * i**monthly/1-(1+i**monthly)**-L`months
-
-
-M=Monthly principal and interest paymeny
-P=Principal (loan amount)
-i=monthly interest rate , decimal form (ex 1% =0.01)
-L=length of loan in monhts
-*/
-
-/*function onConvertBtnClicked(){
+function onCalculateClicked(){
     console.log("Clicked!!");
 
     // get the known (user supplied) values.
-    let userTypedValue = txtInput.value;
-    let valueAsNumber = parseFloat(userTypedValue);
-    console.log("Got the value from the textbox it was: " + userTypedValue);
 
-    // calculate the unknown..
-    let fahrenheit = valueAsNumber * (9/5) + 32;
+    let principal = parseFloat(amount);
+    let interest = parseFloat(interestRate) / 100 / 12;
+    let length = parseFloat(payments) * 12;
     
-    console.log("calculated the value of: " + fahrenheit);
+    // If the result is a finite number, the user's input was good and
+    // we have meaningful results to display*/
+ 
+    let x = Math.pow(1 + interest, payments); //Math.pow computes powers
+    let monthly = (principal*x*interest)/(x-1);
+    
 
+    const  monthlyPay = x * monthly.toFixed(2);
+    const total = ((monthly*payments)-principal).toFixed(2);
 
-    // display the results to the user
-    txtOutput.value = fahrenheit;
+    
+    console.log("calculated the value of: " + monthlyPay);
+    console.log("calculated the value of: " + total);
 
-}*/
-
-
-   /* let txtInputP = txtInputP.value;
-
-    let txtInputIr= txtInputIr.value;
-
-    let txtInputL = txtInputL.value;
-
-    //
-    let txtOutputCost = txtOutputCost.value;
-
-    let txtOutputTotal = txtOutputTotal.value;
-*/
+}
