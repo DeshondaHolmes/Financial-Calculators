@@ -1,27 +1,61 @@
 "Use strict";
 
-/* 
-Calculate CD Formula
+const deposit = document.getElementById("deposit");
 
-A=P(1+r/n)**(nt)
+const interestRate = document.getElementById("interestRate");
 
-A=total CD will be wort at the end of the term , including amount input
-P= principal , or amount inout when you bought CD 
-R= Rate or APY (Annual interest rate, expressed as decimal)EX : interest rate 1.25 APY , r is 0.0125
-n= number of times that interest in compaunded every year , (n=365,interest compounded daily )
-t=time , number of years until maturity date
-
-*/
-
-const txtInput = document.getElementById("txtInput");
-
-const txtOutput = document.getElementById("txtOutput");
+const cdTerm = document.getElementById("cdTerm");
+const futureValue = document.getElementById("futureValue");
+const interestEarned = document.getElementById("interestEarned");
 
 const calculateBtn = document.getElementById("calculateBtn");
+
+const resetBtn = document.getElementById("resetBtn");
 
 window.onload = init;
 
 
-function init(){
+function init() {
     calculateBtn.onclick = onCalculateBtnClicked;
+    resetBtn.onclick = onResetBtnClicked;
+
 }
+
+
+
+
+function onCalculateBtnClicked() {
+
+   let  principal = parseFloat(deposit.value);
+   let  interest = parseFloat(interestRate.value)/100/12;
+   let  years = parseFloat (cdTerm.value);
+
+
+   const inFutureValue = principal * Math.pow(1 + interest, years);
+   const earnedInterest = inFutureValue - principal;
+
+   futureValue.value = inFutureValue.toFixed(2);
+   interestEarned.value = earnedInterest.toFixed(2)
+
+    console.log("clicked calculate button row");
+
+    console.log(principal);
+
+    console.log(interest);
+
+    console.log(years);
+
+
+
+}
+
+function onResetBtnClicked() {
+    interestEarned.value = "";
+    interestRate.value = "";
+    futureValue.value = "";
+    deposit.value = "";
+    cdTerm.value = "";
+
+    console.log("clicked reset button row");
+}
+

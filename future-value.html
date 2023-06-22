@@ -46,45 +46,49 @@
     <br>
     <!---->
     <!--start-->
-    <main class="conatiner-flex">
+    <main>
         <div class="container">
             <div class="row">
-                <div class="col text-center">
-                    <h1>Calculate Future Value Of CD</h1>
+                <div class="col-sm-4-col-lg-12">
+                    <h1 class="text-center">Calculate Future Value Of CD</h1>
                 </div>
             </div>
 
             <!---->
             <hr>
             <!---->
+            <div class="container">
 
-            <div class="row">
-                <div class="col-2 text-align-center">
-                    <form id="myForm">
-                        <div class="mb-3">
-                            <label for="txtInput" class="form-label">Deposit $</label>
-                            <input type="text" class="form-control" id="txtInput">
-                        </div>
-                        <div class="mb-3">
-                            <label for="txtInput" class="form-label">Interest Rate</label>
-                            <input type="text" class="form-control" id="txtInput">
-                        </div>
-                        <div class="mb-3">
-                            <label for="txtInput" class="form-label">CD Term Length (Years)</label>
-                            <input type="text" class="form-control" id="txtInput">
-                        </div>
-                        <div class="mb-3">
-                            <label for="txtOutputcost" class="form-label">Future Value $ :</label>
-                            <input type="text" class="form-control" id="txtOutputcost" readonly="">
-                        </div>
-                        <div class="mb-3">
-                            <label for="txtOutputtotal" class="form-label">Total Interest Earned ($) :</label>
-                            <input type="text" class="form-control" id="txtOutputtotal" readonly="">
-                        </div>
-                        <button id="calculatetBtn" type="button" class="btn btn-primary">Calculate</button>
-                        <button id="resetBtn" type="button" class="btn btn-danger">Reset</button>
-                    </form>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <form id="myForm">
+                            <div class="mb-3">
+                                <label for="deposit" class="form-label">Deposit $</label>
+                                <input type="number" class="form-control" id="deposit">
+                            </div>
+                            <div class="mb-3">
+                                <label for="interestRate" class="form-label">Interest Rate</label>
+                                <input type="number" class="form-control" id="interestRate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cdTerm" class="form-label">CD Term Length (Years)</label>
+                                <input type="numner" class="form-control" id="cdTerm">
+                            </div>
+                            <div class="mb-3">
+                                <label for="futureValue" class="form-label">Future Value $ :</label>
+                                <input type="number" class="form-control" id="futureValue" readonly="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="interestEarned" class="form-label">Total Interest Earned ($) :</label>
+                                <input type="number" class="form-control" id="interestEarned" readonly="">
+                            </div>
+                            <button id="calculateBtn" type="button" class="btn btn-primary">Calculate</button>
+                            <button id="resetBtn" type="button" class="btn btn-danger">Reset</button>
+                        </form>
+                    </div>
                 </div>
+
+
             </div>
 
         </div>
@@ -99,7 +103,7 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
         </script>
     <script src="scripts/future.cd.js"></script>
-    <script src="scripts/site.js"></script>
+   
 
 </body>
 
