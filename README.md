@@ -11,7 +11,7 @@ I was tasked to complete a website for a financial organization
 ![Homepage](/images/financialCalculateHome.png)
 ![MonthlyPayment](/images/MonthlyPaymentLoan.png)
 ![Monthly loan data](/images/monthlyLoanData.png)
-[cd calculator](/images/cdCalculator.png)
+![cd calculator](/images/cdCalculator.png)
 ![cd calculator with data](/images/cdCalculatorData.png)
 ![responsive cd calculator](/images/responsiveCDCalculator.png)
 ![Responsive Monthly loan page ](/images/responsiveLoan.png)
