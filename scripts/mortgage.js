@@ -22,9 +22,11 @@ console.log(totalInterest);
 
 //button
 
-const calculate = document.getElementById("calculate");
+const calculateBtn = document.getElementById("calculateBtn");
 
-const calculate = document.getElementById("calculate");
+const resetBtn = document.getElementById("resetBtn");
+
+
 
 //wire up
 window.onload = init;
@@ -34,7 +36,24 @@ window.onload = init;
 
 function init() {
     //code will run once oage finsih loading
-    calculate.onclick = onCalculateClicked;
+    calculateBtn.onclick = onCalculateClicked;
+    resetBtn.onclick = onResetClicked;
+
+}
+
+function onResetClicked() {
+   loanAmount.value = "";
+
+   interestRate.value = "";
+
+   years.value = "";
+
+   monthlyPayment.value = "";
+
+   totalInterest.value = "";
+
+   
+   
 }
 
 function onCalculateClicked() {
